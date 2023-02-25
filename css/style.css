@@ -2358,10 +2358,7 @@ input {
    margin: 0 0 35px;
  }
  
- .sec-pad {
-   /* padding: 60px 0 0; */
-   /* margin: 50px 0; */
- }
+
  
  .contact-sec {
    align-items: center;
@@ -2461,10 +2458,7 @@ input {
    color: #000;
  }
  
- .inptFld:focus {
-   /* outline-offset: -4px; */
-   /* outline: 1px solid #f93; */
- }
+
  
  .contFrm textarea {
    height: 75px;
