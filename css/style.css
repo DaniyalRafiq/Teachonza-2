@@ -2341,3 +2341,191 @@ i.fa-solid.fa-copy {
    gap: 24px;
 }
 /* about us end */
+
+
+
+/* contact us  */
+
+input {
+   overflow: hidden;
+ }
+ 
+ .section-title {
+   position: relative;
+   font-size: 30px;
+   font-weight: 600;
+   font-family: "Poppins", sans-serif;
+   margin: 0 0 35px;
+ }
+ 
+ .sec-pad {
+   /* padding: 60px 0 0; */
+   /* margin: 50px 0; */
+ }
+ 
+ .contact-sec {
+   align-items: center;
+   display: flex;
+ }
+ 
+ .contact-sec .contact-ul li,
+ .contact-ul b {
+   font-size: 20px;
+   margin: 10px 0;
+   font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+   word-wrap: break-word;
+ }
+ 
+ .contact-sec .contact-ul i {
+   font-size: 18px;
+   padding: 10px;
+   margin-right: 10px;
+   border-radius: 50%;
+ }
+ .contact-detail a {
+   color: #000;
+   text-decoration: none;
+ }
+ 
+ .contact-sec .contact-ul li b:hover {
+   color: var(--primary);
+ }
+ 
+ .contact-sec .contact-ul li .fa-location-dot {
+   color: #f44337;
+   border: 2px solid #f4433790;
+ }
+ 
+ .contact-sec .contact-ul li .fa-phone {
+   color: #00b055;
+   border: 2px solid #00b05590;
+ }
+ 
+ .contact-sec .contact-ul li .fa-envelope {
+   color: #ff6347;
+   border: 2px solid #ff634790;
+ }
+ 
+ .contact-detail span {
+   width: 400px;
+   display: flex;
+   justify-content: center;
+ }
+ .contact-detail span a {
+   font-size: 20px;
+   padding: 6px 12px;
+   color: #000;
+   border-radius: 50%;
+   margin: 0px 5px;
+ }
+ .contact-detail span .fb {
+   color: #3b5998;
+   border: 3px solid #3b5998;
+ }
+ .contact-detail span .fb:hover {
+   color: #fff;
+   background-color: #3b5998;
+ }
+ 
+ .contact-detail span .insta {
+   color: #833ab4;
+   border: 3px solid #833ab4;
+ }
+ .contact-detail span .insta:hover {
+   color: #fff;
+   background-color: #833ab4;
+ }
+ 
+ .contact-detail span .twitter {
+   color: #00acee;
+   border: 3px solid #00acee;
+ }
+ .contact-detail span .twitter:hover {
+   color: #fff;
+   background-color: #00acee;
+ }
+ 
+ form.contFrm {
+   max-width: 396px;
+   margin: auto;
+ }
+ 
+ .inptFld {
+   width: 100%;
+   height: 50px;
+   border: 0;
+   margin: 0 0 10px;
+   border-radius: 8px;
+   padding: 0 20px;
+   font-size: 16px;
+   color: #000;
+ }
+ 
+ .inptFld:focus {
+   /* outline-offset: -4px; */
+   /* outline: 1px solid #f93; */
+ }
+ 
+ .contFrm textarea {
+   height: 75px;
+   padding-top: 5px;
+   border-bottom: 1px solid #dddddd;
+   outline: none;
+ }
+ .inptBtn {
+   height: 50px;
+   border: 0;
+   background: #00b055;
+   font-size: 14px;
+   color: #fff;
+   margin: auto;
+   letter-spacing: 1px;
+   cursor: pointer;
+   width: 100%;
+   max-width: 200px;
+ }
+ .col-sm-6 input {
+   border-bottom: 1px solid #dddddd;
+}
+.contact-detail {
+   display: flex;
+   flex-direction: column;
+   gap: 12px;
+}
+
+
+a.Submit-btn {
+   padding: 8px 20px;
+   background: var(--primary);
+   border-radius: 25px;
+   color: white;
+   font-size: 20px;
+   font-weight: 600;
+   position: relative;
+   overflow: hidden;
+}
+
+a.Submit-btn:after {
+   content: "";
+   position: absolute;
+   background: var(--primaryDark);
+   height: 100%;
+   width: 0%;
+   transition: 0.3s;
+   border: 0;
+   inset: 0;
+   
+}
+
+a.Submit-btn:hover:after {
+   width: 100%;   
+}
+.col-12.submit {
+    display: flex;
+    justify-content: flex-start;
+}
+a.Submit-btn span {
+   position: relative;
+   z-index: 2;
+}
+ /*contact us end  */
