@@ -1019,11 +1019,15 @@ button.hero-btn.blog-btn {
 
 .category-card figure {
    overflow: hidden;
+   height: 100%;
+   border-radius: 5px 5px 0px 0px;
+   width: 100%;
 }
 
 .category-card figure img {
    height: 100%;
    object-fit: cover;
+   width: 100%;
 }
 
 .category-content {
@@ -1037,8 +1041,8 @@ button.hero-btn.blog-btn {
 }
 
 .categprie-img figure {
-   height: 80px;
-   border-radius: 5px 5px 0px 0px;
+   height: 100%;
+   border-radius: 5px 0px 0px 5px;
    width: 80px;
    flex: 0 0 80px;
    overflow: hidden;
@@ -2539,8 +2543,8 @@ a.Submit-btn span {
 
 .category-main {
    display: grid;
-   gap: 20px;
-   grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+   gap: 34px;
+   grid-template-columns: repeat(auto-fill, minmax(356px, 1fr));
 }
 
 .category-img figure {
@@ -2576,9 +2580,8 @@ a.Submit-btn span {
 
 .category-card {
    display: grid;
-   grid-template-columns: repeat(auto-fill, minmax(183px, 1fr));
    gap: 10px;
-   /* padding: 0px 5px; */
+   grid-template-columns: repeat(auto-fill, minmax(183px, 1fr));
 }
 
 .category-content h4 {
@@ -2607,7 +2610,7 @@ a.Submit-btn span {
    top: 100%;
    backdrop-filter: blur(3px);
    z-index: 1234;
-   transition: all 0.3s ease 0s;
+   transition: all 0.3s cubic-bezier(0.32, -0.31, 0.9, 1.28) 0s;
    border-radius: 5px;
 }
 
@@ -2628,10 +2631,11 @@ a.cat-btn:hover {
 }
 
 .cat-card-img {
-   position: relative;
    overflow: hidden;
    border-radius: 5px;
    display: block;
+   position: relative;
+   transition: all 0.3s ease 0s;
 }
 
 .cat-card-img figure {
@@ -2644,16 +2648,6 @@ a.cat-btn:hover {
    width: 100%;
    height: 100%;
    object-fit: cover;
-}
-
-.cat-card-img figure::after {
-   content: "";
-   height: 100%;
-   width: 100%;
-   inset: 0px;
-   z-index: 1;
-   position: absolute;
-   background: linear-gradient(0deg, rgba(0, 0, 0, 0.95), transparent);
 }
 
 .cat-card-after {
@@ -2674,4 +2668,43 @@ a.cat-btn:hover {
 .cat-after-content span {
    font-size: 20px;
    font-weight: 600;
+}
+
+.category-card {
+   position: relative;
+}
+
+.cat-content {
+   position: absolute;
+   height: 32px;
+   width: 100%;
+   padding: 5px;
+   background: rgba(0, 0, 0, 0.26);
+   bottom: 0px;
+   backdrop-filter: blur(5px);
+   color: white;
+   border-top: 1px solid rgba(255, 255, 255, 0.28);
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   transition: all 0.3s cubic-bezier(0, 0.86, 0.46, 0.96) 0s;
+}
+
+.cat-content h6 {
+   margin: 0px;
+   font-size: 18px;
+   font-weight: 700;
+   text-align: center;
+}
+
+.cat-card-img:hover .cat-content {
+   height: 90px;
+   border: none;
+}
+
+.border- {
+   height: 3px;
+   width: 100%;
+   background: rgb(201, 201, 201);
+   margin: 10px 0px;
 }
