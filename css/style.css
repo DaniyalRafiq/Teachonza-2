@@ -2581,7 +2581,7 @@ a.Submit-btn span {
 .category-card {
    display: grid;
    gap: 10px;
-   grid-template-columns: repeat(auto-fill, minmax(124px, 1fr));
+   grid-template-columns: repeat(auto-fill, minmax(134px, 1fr));
 }
 
 .category-content h4 {
