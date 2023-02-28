@@ -1149,16 +1149,37 @@ button.hero-btn.blog-btn {
    padding-bottom: 10px;
 }
 
+a.category-item:after {
+   content: "";
+   background: var(--secondary);
+   height: 1px;
+   width: 0%;
+   position: absolute;
+   bottom: -1px;
+   left: 0;
+   transition: .6s;
+}
+a.category-item:hover:after{
+   width: 100%;
+}
+a.category-item:hover{
+   color: var(--secondary);
+}
 .category-item {
+   position: relative;
    padding: 10px 0px;
    border-bottom: 1px solid rgb(193, 193, 193);
    font-size: 16px;
+   transition: 0.5s;
 }
 
 .category-item:last-of-type {
    border-bottom: none;
    padding-bottom: 0px;
 }
+.category-item:last-of-type:after{
+   content: none;
+} 
 
 .tag-post {
    background: rgb(255, 255, 255);
