@@ -1580,7 +1580,7 @@ p.msgs {
    display: flex;
    align-self: flex-start;
    padding: 3px 10px;
-   border-radius: 50px;
+   border-radius: 5px;
 }
 
 .single-blog-flex {
