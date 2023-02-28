@@ -65,6 +65,11 @@ p {
    overflow: hidden;
    text-overflow: ellipsis;
    -webkit-box-orient: vertical;
+   font-size: 20px;
+}
+.latest-blog-post-2.bg-dark:hover figure img {
+   transform: scale(1.1);
+   padding: 0;
 }
 
 .fotoer-links ul li a:hover {
@@ -76,7 +81,9 @@ button, button:focus, input, input:focus {
    border: none;
    outline: none;
 }
-
+.cpn-head p {
+   font-size: 15px;
+}
 nav li:has(.logo) {
    display: none;
 }
@@ -95,14 +102,47 @@ nav li:has(.logo) {
    --black: #222;
 }
 
-.start-orange {
-   color: orange;
+.orange-star {
+   color: rgb(255, 204, 0) !important;
 }
 
 .fa-star {
    color: rgb(204, 204, 204);
    cursor: pointer;
    font-size: 20px;
+   transition: 0.3s;
+}
+.fa-star:hover{
+   color: rgb(255, 204, 0) !important;
+}
+.latest-blog-post figure:hover .zoom {
+   opacity: 1;
+} 
+.latest-blog-post:hover figure img {
+   transform: scale(1.1);
+}
+
+.header.fixed {
+   position: sticky;
+   top: -1px;
+   width: 100%;
+   animation: scroll 0.5s 1;
+   z-index: 9999;
+}
+
+@keyframes scroll {
+   0% {
+      transform: translate(0, -50%);
+      opacity: 0;
+   }
+
+50%{
+   opacity: 0.5;
+}
+   100% {
+      opacity: 1;
+
+   }
 }
 
 .header_top {
@@ -203,6 +243,17 @@ section:hover .main-heading-content h4 {
    border-top: 1px solid rgb(174, 81, 255);
    gap: 30px;
 }
+.zoom {
+   position: absolute;
+   top: 0;
+   left: 0;
+   height: 100%;
+   width: 100%;
+   opacity: 0;
+   transition: opacity 0.5s ease;
+   background: rgba(255, 255, 255, 0.2) url(image.jpg) no-repeat center center;
+   background-size: 120%;
+ }
 
 .hero-btn {
    background: var(--primary);
@@ -473,6 +524,9 @@ form.hero-search {
    height: 100%;
    width: 100%;
    object-fit: cover;
+   display: block;
+   transition: transform 0.5s ease;
+   transition: 0.3s;
 }
 
 .latest-blog-post {
@@ -551,6 +605,7 @@ form.hero-search {
    display: block;
    margin: 0px;
    z-index: 1;
+   overflow: hidden;
 }
 
 .latest-blog-post-2 {
@@ -566,6 +621,7 @@ form.hero-search {
    height: 100%;
    object-fit: cover;
    border-radius: 10px;
+   transition: 0.3s;
 }
 
 .latest-blog-post figure::after {
@@ -659,7 +715,7 @@ form.hero-search {
 }
 
 .blog-heading.latest-post-img h4 {
-   padding: 0px 30px;
+   padding: 0px 15px;
    -webkit-line-clamp: 2;
    color: white;
    font-size: 20px;
@@ -667,9 +723,9 @@ form.hero-search {
 }
 
 .blog-heading.latest-post-img p {
-   padding: 0px 30px;
    margin-bottom: 15px;
    color: rgb(225, 225, 225);
+   padding: 0px 15px;
 }
 
 .mian-blog {
@@ -999,7 +1055,7 @@ a.blog-card figure img {
 }
 
 .blog-card:hover .see-more {
-   color: var(--secondaryDark);
+
 }
 
 .blog-card:hover figure img {
@@ -1010,6 +1066,7 @@ button.hero-btn.blog-btn {
    padding: 5px 15px;
    border-radius: 5px;
    font-size: 15px;
+   transition: 0.3s;
 }
 
 .news-content p {
@@ -1123,10 +1180,11 @@ button.hero-btn.blog-btn {
 
 .postion_stic {
    position: sticky;
-   top: 10px;
+   top: 140px;
    box-shadow: rgba(0, 0, 0, 0.333) 0px 0px 5px;
    flex: 0 0 300px;
    border-radius: 10px;
+   transition: 0.3s;
 }
 
 .blog-form {
@@ -1680,7 +1738,7 @@ p.msgs {
 
 .store-main {
    display: grid;
-   grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+   grid-template-columns: repeat(auto-fill, minmax(195px, 1fr));
    gap: 15px;
    padding: 20px 0px 0px;
    width: 100%;
@@ -1691,6 +1749,7 @@ p.msgs {
    align-items: center;
    justify-content: space-between;
    padding: 5px;
+   /* border-top: 1px solid lightgrey; */
 }
 
 .store-card {
@@ -1708,6 +1767,7 @@ p.msgs {
 
 .blog-side h4 {
    font-weight: 700;
+   font-size: 21px;
 }
 
 .store-card:hover figure img {
@@ -1756,6 +1816,7 @@ p.msgs {
    display: flex;
    flex-direction: column;
    gap: 20px;
+   width: 100%;
 }
 
 .store-heading::after {
@@ -1888,7 +1949,8 @@ i.fa-solid.fa-check {
 }
 
 a.deal-btn, a.coupons-btn {
-   width: 180px;
+   /* width: 180px; */
+   flex: 0 0 180px;
    height: 40px;
    background-color: var(--secondary);
    position: relative;
@@ -2058,8 +2120,8 @@ a.coupon-details {
 }
 
 .coupon-verified::before {
-   background-color: var(--primary);
-   width: 0px;
+   /* background-color: var(--primary); */
+   width: 100%;
 }
 
 .coupon-verified:hover::before {
@@ -2109,7 +2171,19 @@ a.coupon-details i.active {
    right: 15px;
    clip-path: polygon(50% 50%, 0px 0px, 100% 0px);
 }
+a.switchers-items:hover ,
+.switchers-items.active {
+   background: var(--secondary);
+   color: black;
+}
+.switchers-items:hover:after   {
+   background-color: var(--secondary);
 
+}
+
+.switchers-items.active::after {
+   background: var(--secondary);
+}
 .single-top-card {
    display: flex;
    gap: 20px;
@@ -2124,6 +2198,7 @@ a.coupon-details i.active {
    height: 140px;
    width: 140px;
    box-shadow: rgba(0, 0, 0, 0.14) 0px 0px 20px;
+   border-radius: 5px;
 }
 
 .single-top-img figure img {
