@@ -1333,6 +1333,7 @@ a.post-item span {
    text-transform: capitalize;
    padding-bottom: 10px;
    color: rgb(0, 0, 0);
+   padding: 0;
 }
 
 .blog-img figure {
@@ -2677,7 +2678,7 @@ a.Submit-btn span {
 .category-card {
    display: grid;
    gap: 10px;
-   grid-template-columns: repeat(auto-fill, minmax(134px, 1fr));
+   grid-template-columns: repeat(auto-fill, minmax(114px, 1fr));
 }
 
 .category-content h4 {
