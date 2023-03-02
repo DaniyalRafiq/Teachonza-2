@@ -34,14 +34,14 @@ $(document).ready(function () {
     })
  
  
-    $(window).scroll(function(event) {
-        let $headerHeight = $('.header').height();
-        if ($(document).scrollTop() > $headerHeight) {
-           $('.header').addClass("fixed");
-        } else if ($(document).scrollTop() < 0.1) {
-           $('.header').removeClass("fixed")
-        }
-     });
+   //  $(window).scroll(function(event) {
+   //      let $headerHeight = $('.header').height();
+   //      if ($(document).scrollTop() > $headerHeight) {
+   //         $('.header').addClass("fixed");
+   //      } else if ($(document).scrollTop() < 0.1) {
+   //         $('.header').removeClass("fixed")
+   //      }
+   //   });
     
     const mainAlpha = $('.main-alphabet');
     const alphabet = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"];
