@@ -13,17 +13,21 @@
    width: 3px;
    height: 3px;
    border-radius: 5px;
+   border-radius: 30px;
+   background: #8900ff;
 }
 
 ::-webkit-scrollbar-track {
-   background-color: gray;
+   background-color: #f1f1f1;
+   border-radius: 30px;
+   overflow: hidden;
 }
 
 ::-webkit-scrollbar-thumb {
-   background: var(--primaryDark);
-   border-radius: 1px;
+   background: #8900ff;
    transition: all 0.3s ease 0s;
    position: relative;
+   border-radius: 30px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
@@ -100,10 +104,10 @@ p {
 .hero-sub-card {
    height: 100%;
    display: flex;
-   flex: 0 0 300px;
+   flex: 0 0 299px;
    border-radius: 10px;
    flex-direction: column;
-   box-shadow: 0 0 7px #0005;
+   box-shadow: 0 0 0 2px #9821ff;
    background: rgb(255, 255, 255);
    padding: 10px;
    cursor: pointer;
@@ -120,7 +124,8 @@ strong.hero-user {
 }
 
 .hero-card-header h4 {
-   font-size: 20px;
+   font-size: 18px;
+   color: #000;
    font-weight: 700;
 }
 
@@ -130,11 +135,14 @@ strong.hero-user {
 
 .card-foot-time strong {
    color: var(--primary);
+   font-weight: 700;
+   font-size: 14px;
 }
 
 .card-foot-time p {
    font-size: 15px;
-   color: rgb(129, 129, 129);
+   color: #898989;
+   font-weight: 600;
 }
 
 .card-foot-user p {
@@ -146,10 +154,11 @@ strong.hero-user {
    font-size: 30px;
    font-weight: 700;
    text-transform: capitalize;
+   color: #000;
 }
 
 .card-foot-user {
-   background: rgb(21, 111, 135);
+   background: rgb(152 33 255);
    padding: 10px;
    height: 40px;
    border-radius: 50%;
@@ -167,7 +176,9 @@ a.card-foot-user:hover {
 }
 
 .hero-text p {
-   font-size: 17px;
+   font-size: 16px;
+   color: #000000cc;
+   max-width: 600px;
 }
 
 .hero-card {
@@ -176,7 +187,8 @@ a.card-foot-user:hover {
    display: flex;
    margin-top: 20px;
    overflow-x: auto;
-   padding: 15px 0px;
+   padding: 5px;
+   padding-bottom: 20px;
 }
 
 .hero-card::-webkit-scrollbar {
