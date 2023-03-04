@@ -191,7 +191,6 @@ a.card-foot-user:hover {
 
 figure.hero-img {
    overflow: hidden;
-   /* padding: 0px 10px; */
    width: 100%;
    border-radius: 10px;
    height: 200px;
@@ -201,17 +200,12 @@ figure.hero-img img {
    height: 100%;
    width: 100%;
    object-fit: cover;
-   /* border-radius: 10px; */
    transition: 0.3s;
 }
 
-.hero-card-header {
-   /* padding: 10px; */
-}
 
 .hero-card-fotoer {
    border-radius: 0px 0px 10px 10px;
-   /* padding: 10px; */
    display: flex;
    align-items: center;
    justify-content: space-between;
