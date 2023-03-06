@@ -884,7 +884,7 @@ a.logo.footer-logo {
 
 section.bg-dark.footer {
    padding-bottom: 0px;
-   background-color: rgb(31, 11, 32) !important;
+   background: var(--primary);
 }
 
 .footer-middle-content {
@@ -920,7 +920,7 @@ section.bg-dark.footer {
    padding: 30px 20px;
    gap: 30px;
    border-radius: 15px;
-   background: rgb(58, 19, 58);
+   background: var(--primaryDark);
 }
 
 .footer-top {
@@ -1283,7 +1283,7 @@ a.blog-card figure img {
 
 .blog-main {
    display: grid;
-   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+   grid-template-columns: repeat(auto-fill, minmax(356px, 1fr));
    gap: 20px;
    flex: 1 1 0%;
 }
