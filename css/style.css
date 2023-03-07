@@ -40,7 +40,7 @@ section {
 
 a {
    text-decoration: none;
-   color: black;
+   color: #9821ff;
    transition: all 0.3s ease 0s;
 }
 
@@ -409,6 +409,12 @@ section:hover .main-heading-content h4 {
    color: white;
 }
 
+
+.blog-side {
+   align-items: flex-start;
+   flex-flow: wrap;
+}
+
 .blog-btn-btn {
    background: var(--primary);
    padding: 10px 15px;
@@ -417,7 +423,7 @@ section:hover .main-heading-content h4 {
    border: 1px solid rgb(103, 65, 136);
    position: relative;
 }
-
+.footer-top-form.blog-form {box-shadow: none;}
 .blog-btn-btn::before,
 .blog-btn-btn::after {
    content: "";
@@ -671,11 +677,11 @@ i.fa-solid.fa-x.menu-close {
 
 .latest-blog-post-2 figure {
    height: 250px;
-   border-radius: 5px;
+   border-radius: 10px;
    display: block;
    z-index: 1;
-   overflow: hidden;
    margin: 15px 15px 0px;
+   overflow: hidden;
 }
 
 .latest-blog-post-2 {
@@ -690,7 +696,6 @@ i.fa-solid.fa-x.menu-close {
    width: 100%;
    height: 100%;
    object-fit: cover;
-   border-radius: 10px;
    transition: all 0.3s ease 0s;
 }
 
@@ -715,6 +720,10 @@ i.fa-solid.fa-x.menu-close {
    padding: 4px 8px;
    color: white;
    font-size: 14px;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   gap: 10px;
 }
 .btn-blog {
    background: var(--primary);
@@ -1147,14 +1156,14 @@ a.blog-card figure img {
 .blog-card-main {
    display: grid;
    grid-template-columns: repeat(auto-fill, minmax(317px, 1fr));
-   gap: 14px;
+   gap: 25px;
 }
 
 .blog-card {
    background: rgb(255, 255, 255);
    border-radius: 11px;
    transition: all 0.3s ease 0s;
-   box-shadow: 0 7px 7px #0005;
+   box-shadow: 0 0px 7px #0005;
 }
 
 .blog-card-content {
@@ -1302,16 +1311,16 @@ a.blog-card figure img {
 
 .blog-main {
    display: grid;
-   grid-template-columns: repeat(auto-fill, minmax(356px, 1fr));
+   grid-template-columns: repeat(auto-fill, minmax(285px, 1fr));
    gap: 20px;
    flex: 1 1 0%;
 }
 
 .blog-side {
    height: 100%;
-   display: grid;
+   display: flex;
    gap: 15px;
-   grid-template-columns: repeat(auto-fill, minmax(183px, 1fr));
+   flex-direction: column;
 }
 
 .postion_stic {
@@ -1390,6 +1399,7 @@ a.blog-card figure img {
 .tag-post ul li {
    display: flex;
    gap: 10px;
+   padding-bottom: 10px;
 }
 
 .tag-post ul li a {
@@ -1451,7 +1461,6 @@ a.blog-card figure img {
 }
 
 .tag-post li::before {
-   content: "";
    width: auto;
    height: 20px;
    list-style: inside decimal;
@@ -1468,7 +1477,16 @@ a.post-item {
    font-size: 18px;
    font-weight: 600;
 }
-
+span.counting {
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   background: #9821ffb8;
+   height: 25px;
+   color: white;
+   border-radius: 50%;
+   flex: 0 0 26px;
+}
 a.post-item strong {
    flex: 0 0 auto;
 }
@@ -1499,7 +1517,7 @@ a.post-item span {
 
 .post-item a span {
    color: rgb(106, 105, 105);
-   font-size: 14px;
+   font-size: 13px;
 }
 
 .populor-blog {
@@ -1728,6 +1746,7 @@ p.msgs {
    width: 40px;
    overflow: hidden;
    border-radius: 50%;
+   border: 1px solid var(--primary);
 }
 
 .commetn-top figure img {
@@ -1742,42 +1761,83 @@ p.msgs {
    gap: 10px;
 }
 
-.comment-name {
-   font-weight: 600;
+section.comment {
+   display: flex;
+   flex-direction: column;
+   /* gap: 25px; */
 }
 
+.comment-reply a:hover {
+   background: var(--primary);
+   color: white;
+   border: 1px solid;
+   border-color: var(--primary);
+}
+
+.comment-reply a {
+   background: #9821ff;
+   border-radius: 5px;
+   padding: 6px 12px;
+   color: white;
+   border: 1px solid;
+}
+.comment-name {
+   font-weight: 600;
+   color: #000000;
+}
+.comment-section.replied:after {
+   content: "";
+   position: absolute;
+   background: #e1bfff;
+   width: 5%;
+   height: 2px;
+   left: -19px;
+   top: 21%;
+}
+
+.comment-section:after {
+   content: "";
+   position: absolute;
+   height: 100%;
+   width: 2px;
+   background: #e1bfff;
+   left: 0;
+   top: 0;
+}
 .comment-time {
-   color: rgb(126, 126, 126);
+   color: #9821ff;
+   margin-left: auto;
 }
 
 .comment-section {
    display: flex;
    flex-direction: column;
    gap: 10px;
-   border-left: 1px solid rgb(215, 215, 215);
-   border-right: 1px solid rgb(215, 215, 215);
-   border-top-color: rgb(215, 215, 215);
-   border-bottom-color: rgb(215, 215, 215);
-   padding: 0px 10px;
+   padding: 0px 20px;
+   padding-bottom: 10px;
+   border-color: #bdbdbd;
+   position: relative;
+   /* position: relative; */
+   border-radius: 0 0 5px 5px;
 }
 
 .comment-content {
-   padding: 10px;
+   /* padding: 10px; */
 }
 
 .comment-reply {
    display: flex;
    align-items: center;
-   padding: 10px;
+   /* padding: 10px; */
    justify-content: flex-end;
+   font-size: 14px;
 }
 
 .comment-section.replied {
-   padding-left: 50px;
-   border-left: 1px solid rgb(209, 207, 207);
-   background: rgb(231, 221, 240);
-   margin-bottom: 20px;
-   padding-top: 10px;
+   padding: 15px;
+   border-radius: 10px;
+   padding-left: 40px;
+   /* position: relative; */
 }
 
 .comment h4 {
@@ -1785,6 +1845,7 @@ p.msgs {
    margin: 0px;
    font-size: 25px;
    font-weight: 700;
+   /* border-bottom: 1px solid #9451cf; */
 }
 
 .single-content h4 {
@@ -1813,10 +1874,24 @@ p.msgs {
    display: grid;
    grid-template-columns: repeat(auto-fill, minmax(195px, 1fr));
    gap: 15px;
-   padding: 20px 0px 0px;
+   /* padding: 20px 0px 0px; */
    width: 100%;
+   padding: 0 10px;
+}
+.store {
+   display: flex;
+   flex-direction: column;
+   gap: 20px;
+   border-color: #4a4a4a;
+   border: 1px solid;
+   border-top: 0;
+   border-radius: 5px;
+   border-color: #bbbbbb;
 }
 
+.store-link a i {
+   font-size: 14px;
+}
 .store-card-content {
    display: flex;
    align-items: center;
@@ -1843,6 +1918,9 @@ p.msgs {
    background: var(--primary);
    padding: 10px;
    color: white;
+   position: sticky;
+   z-index: 21;
+   top: 0;
 }
 
 .store-card:hover figure img {
@@ -1878,6 +1956,11 @@ p.msgs {
    align-items: center;
    justify-content: space-between;
    position: relative;
+   padding-bottom: 5px;
+   background: var(--primaryDark);
+   color: white;
+   border-radius: 5px;
+   padding: 10px;
 }
 
 .store-link a {
@@ -1885,6 +1968,10 @@ p.msgs {
    border-radius: 5px;
    position: relative;
    z-index: 5;
+   color: white;
+   display: flex;
+   align-items: center;
+   gap: 6px;
 }
 
 .store-card-section {
@@ -1902,7 +1989,7 @@ p.msgs {
    width: 10%;
    left: 0px;
    background-color: var(--primaryDark);
-   bottom: -5px;
+   bottom: 0;
    transition: all 0.3s ease 0s;
 }
 
@@ -2746,7 +2833,7 @@ a.Submit-btn span {
 .category-card {
    display: grid;
    gap: 10px;
-   grid-template-columns: repeat(auto-fill, minmax(114px, 1fr));
+   grid-template-columns: repeat(auto-fill, minmax(103px, 1fr));
 }
 
 .category-content h4 {
@@ -2787,7 +2874,14 @@ a.cat-btn {
    border-radius: 5px;
    transition: all 0.3s ease 0s;
 }
-
+.blog-side>* {
+   box-shadow: rgba(0, 0, 0, 0.333) 0px 0px 5px;
+   border-radius: 8px;
+   overflow: hidden;
+   width: 100%;
+   max-height: 300px;
+   overflow: auto;
+}
 a.cat-btn:hover {
    background-color: var(--primaryDark);
 }
@@ -2878,17 +2972,21 @@ a.cat-btn:hover {
    inset: 0px 0px 0px 50%;
    transform: translate(-50%, -43%);
 }
-
+.author:hover .author-header figure img {
+   transform: scale(1.1);
+}
 .author-header figure img {
    height: 100%;
    width: 100%;
    object-fit: cover;
+   transition: 0.3s;
 }
 
 .author {
    position: relative;
    box-shadow: rgba(0, 0, 0, 0.15) 0px 10px 30px, rgba(0, 0, 0, 0.3) 0px 2px 4px, rgba(255, 255, 255, 0.1) -1px -1px 11px, rgba(255, 255, 255, 0.2) 0px 1px 0px inset;
    border-radius: 5px;
+   overflow: unset;
 }
 
 .author-body h4 {
@@ -2896,6 +2994,7 @@ a.cat-btn:hover {
    color: black;
    font-size: 20px;
    font-weight: 700;
+   position: unset;
    padding: 0px;
 }
 
@@ -3062,8 +3161,3 @@ p.info-para {
    padding: 0px;
 }
 
-.blog-side>* {
-   box-shadow: rgba(0, 0, 0, 0.333) 0px 0px 5px;
-   border-radius: 8px;
-   overflow: hidden;
-}

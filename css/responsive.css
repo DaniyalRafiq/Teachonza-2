@@ -52,7 +52,12 @@
 .blog-heading.latest-post-img p {
   -webkit-line-clamp: 2;
 }
-
+.blog-side > * {
+  flex: 1 1 300px;
+}
+.blog-side {
+  flex-direction: revert;
+}
 .blog
 .hero-main-card .hero-sub-card figure {
     height: 200px;
