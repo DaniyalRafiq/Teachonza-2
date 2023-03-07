@@ -3096,6 +3096,7 @@ a.cat-btn:hover {
 
 .category-card {
    position: relative;
+   overflow: auto;
 }
 
 .cat-content {
