@@ -4,7 +4,7 @@ $(document).ready(function () {
        $(".header_bottom").toggleClass("active");
        $("body").toggleClass("active");
     });
-    var swiper = new Swiper('.slider_blogs', {
+    var swiper = new Swiper('.slider_blogs',{
        slidesPerView: "auto",
        spaceBetween: 10,
        centeredSlides: false,
@@ -12,8 +12,7 @@ $(document).ready(function () {
        speed: 800,
        autoplay: false
     });
- 
- 
+
     $(".coupon-details").click(function (e) {
        e.preventDefault();
        $(this).parents(".card-store").siblings(".details-hide").slideToggle()
