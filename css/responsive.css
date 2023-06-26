@@ -40,7 +40,9 @@
 
 @media (max-width: 992px) {
   .hero-main {flex-direction: column;}
-
+  .header_bottom nav{
+    justify-content: flex-start;
+  }
 .hero-main-card .hero-sub-card {flex-direction: row;}
 
 .hero-main-card {
@@ -237,6 +239,7 @@
     height: 100%;
     /* overflow-y: hidden; */
     max-width: 300px;
+    margin: auto;
   }
 
   .header_bottom.active {

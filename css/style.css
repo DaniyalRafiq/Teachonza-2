@@ -335,7 +335,19 @@ nav li:has(.logo) {
 .see-more {
    transition: all 0.3s ease 0s;
 }
+.see-more span {
+   margin-left: -20px;
+   opacity: 0;
+   transition: 0.3s ease;
+   font-size: 13px;
+   display: block;
+   line-height: 1;
+}
 
+.see-more:hover span {
+   margin: 0;
+   opacity: 1;
+}
 .main-heading-content {
    margin: 0px 0px 30px;
    display: flex;
@@ -346,7 +358,6 @@ nav li:has(.logo) {
 
 .main-heading-content::before,
 .main-heading-content::after {
-   content: "";
    background-color: rgb(237, 237, 237);
    height: 2px;
    position: absolute;
@@ -366,21 +377,8 @@ section:hover .main-heading-content::before {
    transition: width 0.5s ease-in-out 0.3s;
 }
 
-.main-heading-content h4::after {
-   z-index: 1;
-   content: "";
-   position: absolute;
-   background-color: var(--primary);
-   transition: width 0.5s ease-in-out 0.9s;
-   height: 38px;
-   width: 3%;
-   border-radius: 5px;
-   inset: 50% 0px;
-   transform: translateY(-50%);
-}
-
 section:hover .main-heading-content h4::after {
-   width: 100%;
+   /* width: 100%; */
    transition: width 0.5s ease-in-out 0s;
 }
 
@@ -391,17 +389,15 @@ section:hover .main-heading-content h4::after {
    height: 100%;
    width: 100%;
    text-transform: capitalize;
-   padding: 10px 13px;
+   color: black;
 }
 
 .main-heading-content h4 {
-   font-size: 24px;
+   font-size: clamp(20px,2.5vw,28px);
    font-weight: 700;
    position: relative;
-   background: white;
    border-radius: 10px;
    margin-bottom: 0px;
-   transition: all 0.3s ease-in-out 0.9s;
 }
 
 section:hover .main-heading-content h4 {
@@ -496,7 +492,9 @@ section:hover .main-heading-content h4 {
    transition: all 0.3s ease 0s;
    overflow: hidden;
 }
-
+.icon i {
+   font-size: 22px;
+}
 .icon.fb {
    background: rgb(24, 119, 242);
    color: white;
@@ -698,7 +696,7 @@ i.fa-solid.fa-x.menu-close {
 }
 
 .latest-blog-post-2 figure {
-   height: 250px;
+   height: 180px;
    border-radius: 10px;
    display: block;
    z-index: 1;
@@ -736,6 +734,21 @@ i.fa-solid.fa-x.menu-close {
    justify-content: space-between;
    color: gray;
 }
+.blog-name {
+   display: flex;
+   align-items: center;
+   gap: 5px;
+}
+
+.blog-name i {
+   font-size: 12px;
+}
+
+.blog-date {
+   display: flex;
+   align-items: center;
+   gap: 5px;
+}
 
 .date {
    background: var(--primary);
@@ -746,7 +759,8 @@ i.fa-solid.fa-x.menu-close {
    display: flex;
    align-items: center;
    justify-content: center;
-   gap: 10px;
+   gap: 6px;
+   font-size: 12px;
 }
 
 .btn-blog {
@@ -802,14 +816,11 @@ i.fa-solid.fa-x.menu-close {
 }
 
 .latest-blog-post-2 {
-   background-position: center center;
-   background-repeat: no-repeat;
-   background-size: cover;
-   background-attachment: fixed;
    position: relative;
    overflow: hidden;
    border-radius: 15px;
    cursor: pointer;
+   box-shadow: 0 0 5px #0002;
 }
 
 .latest-blog-post-2::after {
@@ -817,7 +828,7 @@ i.fa-solid.fa-x.menu-close {
    height: 100%;
    width: 100%;
    position: absolute;
-   background: rgb(241, 224, 255);
+   background: white;
 }
 
 .blog-btn.latest-img-btn a {
@@ -841,7 +852,7 @@ i.fa-solid.fa-x.menu-close {
 
 .mian-blog {
    display: grid;
-   grid-template-columns: repeat(auto-fill, minmax(306px, 1fr));
+   grid-template-columns: repeat(auto-fill, minmax(279px, 1fr));
    gap: 20px;
 }
 
@@ -1128,7 +1139,7 @@ button.btn-new:hover {
 .main_card::after {
    content: "";
    position: absolute;
-   background: linear-gradient(0deg, rgba(0, 0, 0, 0.94) 20%, transparent 60%);
+   background: linear-gradient(0deg, rgb(12 0 22 / 85%) 20%, transparent 60%);
    inset: 0px;
    border-radius: 10px;
 }
@@ -1148,7 +1159,7 @@ button.btn-new:hover {
    display: flex;
    flex-direction: column;
    height: 100%;
-   padding: 10px;
+   padding: 20px;
    align-items: flex-start;
    gap: 10px;
    bottom: 0px;
@@ -1172,7 +1183,7 @@ a.blog-card figure {
 }
 
 a.blog-card:hover .see-more {
-   color: #000000c2;
+   color: #4c008f;
 }
 
 a.blog-card figure img {
@@ -1192,7 +1203,7 @@ a.blog-card figure img {
    background: rgb(255, 255, 255);
    border-radius: 11px;
    transition: all 0.3s ease 0s;
-   box-shadow: 0 0px 7px #0005;
+   box-shadow: 0 0 5px #0002;
 }
 
 .blog-card-content {
@@ -1200,19 +1211,14 @@ a.blog-card figure img {
    display: flex;
    flex-direction: column;
    align-items: flex-start;
-   gap: 10px;
-   border-right: 1px solid rgb(227, 227, 227);
-   border-bottom: 1px solid rgb(227, 227, 227);
-   border-left: 1px solid rgb(227, 227, 227);
-   border-image: initial;
-   border-top: none;
+   gap: 6px;
    border-radius: 0px 0px 10px 10px;
 }
 
 .blog-card p {
    color: rgb(86, 86, 86);
    -webkit-line-clamp: 3;
-   font-size: 15px;
+   font-size: 14px;
 }
 
 .date-time {
@@ -1221,23 +1227,29 @@ a.blog-card figure img {
    align-items: center;
    justify-content: space-between;
    width: 100%;
-   /* padding-bottom: 10px; */
+   background: #fff;
+   padding: 10px;
+   margin-top: -60px;
+   z-index: 1;
+   border-radius: 10px 10px 0 0;
 }
 
 .blog-card h4 {
    color: black;
    -webkit-line-clamp: 2;
-   font-size: 20px;
-   font-weight: 600;
+   font-size: 18px;
+   font-weight: 700;
+   line-height: 1.5;
 }
 
 .see-more {
    display: flex;
    align-self: flex-end;
-   font-size: 15px;
-   color: black;
+   font-size: 14px;
+   color: #9821ff;
    align-items: center;
    gap: 10px;
+   font-weight: 600;
 }
 
 .blog-card:hover figure img {
@@ -1268,10 +1280,9 @@ a.blog-card figure img {
    display: flex;
    flex-direction: column;
    gap: 5px;
-   padding: 10px;
-   bottom: 10px;
+   padding: 15px;
+   bottom: 0;
    z-index: 1;
-   padding-bottom: 0;
 }
 
 .categprie-img figure {
@@ -1340,8 +1351,8 @@ a.blog-card figure img {
 
 .blog-main {
    display: grid;
-   grid-template-columns: repeat(auto-fill, minmax(285px, 1fr));
-   gap: 20px;
+   grid-template-columns: repeat(auto-fill, minmax(325px, 1fr));
+   gap: 30px;
    flex: 1 1 0%;
 }
 
@@ -1370,7 +1381,7 @@ a.blog-card figure img {
    flex-direction: column;
    box-shadow: rgba(0, 0, 0, 0.15) 0px 10px 30px, rgba(0, 0, 0, 0.3) 0px 2px 4px, rgba(255, 255, 255, 0.1) -1px -1px 11px, rgba(255, 255, 255, 0.2) 0px 1px 0px inset;
    padding-bottom: 0px;
-   gap: 10px;
+   gap: 5px;
    border-radius: 8px;
    overflow: hidden;
 }
@@ -1389,8 +1400,6 @@ a.blog-card figure img {
 }
 
 .category-item::after {
-   content: "";
-   height: 100%;
    background: rgb(223, 187, 255);
    width: 0%;
    position: absolute;
@@ -1400,7 +1409,6 @@ a.blog-card figure img {
 }
 
 .category-item:hover::after {
-   width: 100%;
 }
 
 .category-item:hover {
@@ -1425,6 +1433,40 @@ a.blog-card figure img {
    padding-bottom: 10px;
 }
 
+.tag_post_card_img {
+   height: 55px;
+   overflow: hidden;
+   border-radius: 5px;
+   flex: 0 0 55px;
+}
+
+.tag_post_card_img img {
+   height: 100%;
+   width: 100%;
+   object-fit: cover;
+}
+
+.tag_post_card:hover .tag_post_card_img_content h5 {
+   color: var(--primary);
+}
+
+.tag_post_card {
+   display: flex;
+   gap: 10px;
+   padding: 12px;
+}
+
+.tag_post_card_img_content h5 {
+   font-size: 15px;
+   font-weight: 700;
+   -webkit-line-clamp: 2;
+   color: black;
+   transition: 0.3s;
+}
+
+.tag_post_card_img_content span {
+   font-size: 13px;
+}
 .tag-post ul li {
    display: flex;
    gap: 10px;
@@ -1464,14 +1506,14 @@ a.blog-card figure img {
    cursor: pointer;
    font-size: 15px;
    font-weight: 600;
-   color: rgb(152, 33, 255);
+   color: black;
 }
-
+#custom-checkbox-label:hover {color: var(--primary);}
 #custom-checkbox-label::before {
    content: "";
    height: 20px;
    width: 20px;
-   background-color: rgba(152, 33, 255, 0.29);
+   background-color: #8080804f;
    position: absolute;
    left: 0px;
    border-radius: 5px;
@@ -1589,6 +1631,7 @@ a.post-item span {
    grid-template-columns: repeat(auto-fill, minmax(83px, 1fr));
    gap: 10px;
    padding: 10px;
+   overflow: auto;
 }
 
 .blog-after {
@@ -1723,7 +1766,7 @@ p.msgs {
 
 .blog-section {
    display: flex;
-   gap: 20px;
+   gap: 40px;
 }
 
 .single-content {
@@ -1921,12 +1964,12 @@ p.sote-alp {
 }
 
 .store:hover p.sote-alp {
-   color: white;
+   color: black;
 }
 
 .store:hover .store-heading h4 span:before,
 .store:hover .store-heading h4 span:after {
-   width: 51%;
+   /* width: 51%; */
 }
 
 .store-heading h4:before {
@@ -2019,6 +2062,8 @@ p.sote-alp {
    padding: 10px;
    color: white;
    z-index: 21;
+   position: sticky;
+   top: 0;
 }
 
 .store-card:hover figure img {
@@ -2164,7 +2209,7 @@ p.sote-alp {
    flex: 1 1 0%;
    display: flex;
    flex-direction: column;
-   gap: 15px;
+   gap: 30px;
 }
 
 .single-card-content {
@@ -2228,7 +2273,9 @@ a.coupons-btn {
    align-items: center;
    justify-content: center;
 }
-
+.deal-btn:hover {
+   background: var(--primaryDark);
+}
 .cpn-head {
    display: flex;
    flex-direction: column;
@@ -2524,8 +2571,9 @@ a.switchers-items:hover,
    position: relative;
    height: 140px;
    width: 140px;
-   box-shadow: rgba(0, 0, 0, 0.14) 0px 0px 20px;
    border-radius: 5px;
+   box-shadow: 0 0 5px #0005;
+   padding: 5px;
 }
 
 .single-top-img figure img {
@@ -2576,7 +2624,6 @@ a.deal-btn span {
 }
 
 a.deal-btn::after {
-   content: "";
    position: absolute;
    height: 100%;
    width: 0%;
@@ -2995,7 +3042,7 @@ a.Submit-btn span {
 .category-card {
    display: grid;
    gap: 10px;
-   grid-template-columns: repeat(auto-fill, minmax(103px, 1fr));
+   grid-template-columns: repeat(auto-fill, minmax(70px, 1fr));
 }
 
 .category-content h4 {
@@ -3012,8 +3059,7 @@ a.Submit-btn span {
 .category-img {
    position: relative;
    overflow: hidden;
-   border-radius: 5px;
-   overflow: hidden;
+   border-radius: 10px;
 }
 
 .category-content-btn {
@@ -3043,7 +3089,7 @@ a.cat-btn {
    overflow: hidden;
    width: 100%;
    max-height: 300px;
-   /* overflow: auto; */
+   overflow: auto;
 }
 
 a.cat-btn:hover {
@@ -3205,7 +3251,7 @@ span.developer {
 .form-group input {
    background: transparent;
    color: white;
-   border-color: black;
+   border-color: #0004;
    border-bottom-width: 1px;
    border-bottom-style: solid;
 }
@@ -3221,9 +3267,9 @@ div#form-message-success {
 }
 
 .row.no-gutters {
-   box-shadow: rgba(0, 0, 0, 0.15) 0px 10px 30px, rgba(0, 0, 0, 0.3) 0px 2px 4px, rgba(255, 255, 255, 0.1) -1px -1px 11px, rgba(255, 255, 255, 0.2) 0px 1px 0px inset;
    border-radius: 5px;
    overflow: hidden;
+   box-shadow: 1px 0px 3px 1px #0004;
 }
 
 .info-wrap.w-100.p-lg-5.p-4.img h3 {
@@ -3248,7 +3294,7 @@ textarea#message,
 input#email:focus {
    background: none;
    box-shadow: none;
-   border: 1px solid black;
+   border: 1px solid #0004;
 }
 
 input#subject::placeholder,
@@ -3270,8 +3316,11 @@ input.cont-btn {
    color: black;
 }
 
+
 section.ftco-section {
    padding: 30px;
+   padding-bottom: 50px;
+   padding-top: 50px;
 }
 
 .dbox {
@@ -3314,6 +3363,7 @@ p.info-para {
 
 .text.pl-3 p {
    color: white;
+   font-size: 15px;
 }
 
 .text.pl-3 p a {
@@ -3328,5 +3378,6 @@ p.info-para {
    padding: 0px;
 }
 
-
-
+.latest-post {
+   background: #f2e4ff;
+}
